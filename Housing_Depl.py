@@ -3,9 +3,11 @@ st.title("Housing Prices Prediction")
 
 st.write("""
 ### # reading
-
 import pandas as pd
-housing = pd.read_csv('WBS/ML/housing-deployment-reg.csv')
+url="https://drive.google.com/file/d/15J_Xi1_TSl6iwy9M62G8kIk2JprDLx_E/view?usp=sharing"
+path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
+housing = pd.read_csv(path)
+#housing = pd.read_csv('WBS/ML/housing-deployment-reg.csv')
 
 # train test split
 from sklearn.model_selection import train_test_split
